@@ -1,6 +1,17 @@
-function multiply (a,b) {
+function multiply (a,b, timeout=500) {
     return new Promise ((resolve,reject) => {
-        answer = a*b;
-        resolve(answer);
+        // console.log("before timeout function call", a, b);
+        setTimeout(() => {
+            // console.log("first line in timeout", a, b);
+            let answer = a*b;
+            // console.log("before resolve", a, b);
+            resolve(answer);
+            // console.log("after resolve within timeout", a, b);
+        }, timeout);
+        // console.log("after timeout function call", a, b);
+        // let answer = a*b;
+        // resolve(answer);
     });
 }
+
+export default multiply;
