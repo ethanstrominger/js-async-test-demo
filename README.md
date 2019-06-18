@@ -1,6 +1,7 @@
 after git clone:
+
 ```
 $ npm install
 
-$ babel-node src/demoAsync.js
+$ npm run babel-node src/demoAsync.js
 ```
